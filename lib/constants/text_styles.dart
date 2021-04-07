@@ -196,3 +196,70 @@ TextStyle likeCommentTextStyle() {
     ),
   );
 }
+
+// Bottom Navigation Bar TextStyles.
+TextStyle selectedBNBTextStyle() {
+  return GoogleFonts.montserrat(
+    textStyle: TextStyle(
+      color: iconColorBNB,
+      fontSize: 14.0,
+      letterSpacing: 0,
+      fontWeight: FontWeight.normal,
+    ),
+  );
+}
+
+TextStyle unselectedBNBTextStyle() {
+  return GoogleFonts.montserrat(
+    textStyle: TextStyle(
+      fontSize: 12.0,
+      letterSpacing: 0,
+      fontWeight: FontWeight.normal,
+    ),
+  );
+}
+
+// Drawer TextStyle.
+TextStyle drawerTitleTextStyle() {
+  return GoogleFonts.montserrat(
+    textStyle: TextStyle(
+      color: titleColorSetUrl,
+      fontSize: 38.0,
+      letterSpacing: 0,
+      fontWeight: FontWeight.w500,
+    ),
+  );
+}
+
+TextStyle drawersubTitleTextStyle() {
+  return GoogleFonts.montserrat(
+    textStyle: TextStyle(
+      color: titleColorSetUrl,
+      fontSize: 28.0,
+      letterSpacing: 0,
+      fontWeight: FontWeight.w300,
+    ),
+  );
+}
+
+TextStyle drawersubsubTitleTextStyle() {
+  return GoogleFonts.montserrat(
+    textStyle: TextStyle(
+      color: titleColorSetUrl,
+      fontSize: 20.0,
+      letterSpacing: 0,
+      fontWeight: FontWeight.w200,
+    ),
+  );
+}
+
+TextStyle drawerlistTileTextStyle() {
+  return GoogleFonts.montserrat(
+    textStyle: TextStyle(
+      color: titleColorSetUrl,
+      fontSize: 18.0,
+      letterSpacing: 0,
+      fontWeight: FontWeight.w300,
+    ),
+  );
+}

@@ -8,6 +8,7 @@ import 'package:talawa_design/views/register_screen.dart';
 // Local Imports.
 import 'package:talawa_design/views/splash_screen.dart';
 import 'package:talawa_design/views/set_url_screen.dart';
+import 'package:talawa_design/views/wrapper.dart';
 
 void main() {
   runApp(MyApp());
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+      home: Wrapper(),
     );
   }
 }

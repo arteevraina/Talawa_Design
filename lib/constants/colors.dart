@@ -29,3 +29,7 @@ const Color appBarTextIconColor = Color(0xFFE4FCF9);
 // NewsFeed Colors
 const Color nameColorNewsFeed = Color(0xFF17224D);
 const Color actionBannerColorNewsFeed = Color(0xFF156E93);
+
+// Bottom Navigation Bar Colors.
+const Color backgroundColorBNB = Color(0xFF17224D);
+const Color iconColorBNB = Color(0xFFE4FCF9);
