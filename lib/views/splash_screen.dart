@@ -1,18 +1,37 @@
 // Package imports.
+import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 // Local imports.
 import 'package:talawa_design/constants/colors.dart';
 import 'package:talawa_design/constants/text_styles.dart';
+import 'package:talawa_design/views/register_screen.dart';
+import 'package:talawa_design/views/set_url_screen.dart';
 
-class SplashScreen extends StatelessWidget {
+class SplashScreen extends StatefulWidget {
+  @override
+  _SplashScreenState createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+  @override
+
+  // Showing Splash Screen for 3 seconds.
+  void initState() {
+    super.initState();
+    Timer(
+      Duration(seconds: 5),
+      () => Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+          builder: (context) => SetURLScreen(),
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setPreferredOrientations([
-      DeviceOrientation.portraitUp,
-      DeviceOrientation.portraitDown,
-    ]);
     return Scaffold(
       body: Stack(
         children: [

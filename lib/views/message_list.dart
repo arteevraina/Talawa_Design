@@ -10,39 +10,39 @@ import 'package:talawa_design/views/message_expand.dart';
 class MessageList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        appBar: AppBar(
-          backgroundColor: appBarColor,
-          title: Row(
-            children: [
-              CircleAvatar(
-                child: Image.asset(
-                  "assets/logo.png",
-                ),
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: appBarColor,
+        title: Row(
+          children: [
+            CircleAvatar(
+              child: Image.asset(
+                "assets/logo.png",
               ),
-              SizedBox(
-                width: 10.0,
-              ),
-              Text(
-                "Messages",
-                style: appBarTextStyle(),
-              ),
-            ],
-          ),
+            ),
+            SizedBox(
+              width: 10.0,
+            ),
+            Text(
+              "Messages",
+              style: appBarTextStyle(),
+            ),
+          ],
         ),
-        backgroundColor: scaffoldColor,
-        body: SingleChildScrollView(
-          child: Column(
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: SearchBox(),
-              ),
-              Divider(),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                child: ListView.separated(
+      ),
+      backgroundColor: scaffoldColor,
+      body: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Center(
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                SearchBox(),
+                SizedBox(
+                  height: 10.0,
+                ),
+                Divider(),
+                ListView.separated(
                   shrinkWrap: true,
                   physics: ClampingScrollPhysics(),
                   itemBuilder: (context, index) {
@@ -129,9 +129,9 @@ class MessageList extends StatelessWidget {
                     );
                   },
                   itemCount: 10,
-                ),
-              )
-            ],
+                )
+              ],
+            ),
           ),
         ),
       ),

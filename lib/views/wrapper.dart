@@ -7,6 +7,7 @@ import 'package:talawa_design/constants/text_styles.dart';
 import 'package:talawa_design/views/edit_profile_scree.dart';
 import 'package:talawa_design/views/events_screen.dart';
 import 'package:talawa_design/views/home_page_screen.dart';
+import 'package:talawa_design/views/join_organization_screen.dart';
 import 'package:talawa_design/views/members_screen.dart';
 import 'package:talawa_design/views/message_list.dart';
 
@@ -149,14 +150,24 @@ class _WrapperState extends State<Wrapper> {
                   ),
                 ),
               ),
-              ListTile(
-                title: Text(
-                  "Join Organization",
-                  style: drawerlistTileTextStyle(),
-                ),
-                trailing: Icon(
-                  Icons.card_membership_outlined,
-                  color: backgroundColorBNB,
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => JoinOrganzation(),
+                    ),
+                  );
+                },
+                child: ListTile(
+                  title: Text(
+                    "Join Organization",
+                    style: drawerlistTileTextStyle(),
+                  ),
+                  trailing: Icon(
+                    Icons.card_membership_outlined,
+                    color: backgroundColorBNB,
+                  ),
                 ),
               ),
               ListTile(

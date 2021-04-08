@@ -25,7 +25,7 @@ class MessageExpand extends StatelessWidget {
                 width: 10.0,
               ),
               Text(
-                "Arteev Raina",
+                "Arteev",
                 style: appBarTextStyle(),
               ),
             ],
@@ -34,6 +34,7 @@ class MessageExpand extends StatelessWidget {
         body: Stack(
           children: [
             SingleChildScrollView(
+              physics: BouncingScrollPhysics(),
               child: Padding(
                 padding: const EdgeInsets.all(20.0),
                 child: Column(
@@ -81,7 +82,7 @@ class MessageExpand extends StatelessWidget {
                     ),
                     ListView.separated(
                       shrinkWrap: true,
-                      physics: ClampingScrollPhysics(),
+                      physics: BouncingScrollPhysics(),
                       itemBuilder: (context, index) {
                         return Column(
                           children: [

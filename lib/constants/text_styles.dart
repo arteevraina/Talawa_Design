@@ -525,3 +525,26 @@ TextStyle eventsMemberDetails() {
     ),
   );
 }
+
+// AssignRole Page TextStyles.
+TextStyle bottomSheetTextStyle() {
+  return GoogleFonts.montserrat(
+    textStyle: TextStyle(
+      color: appBarColor,
+      fontSize: 18.0,
+      letterSpacing: 0,
+      fontWeight: FontWeight.w400,
+    ),
+  );
+}
+
+TextStyle bottomSheetButtonTextStyle() {
+  return GoogleFonts.montserrat(
+    textStyle: TextStyle(
+      color: scaffoldColor,
+      fontSize: 15.0,
+      letterSpacing: 0,
+      fontWeight: FontWeight.w300,
+    ),
+  );
+}

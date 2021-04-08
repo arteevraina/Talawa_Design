@@ -1,13 +1,16 @@
 // Library Imports.
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:talawa_design/views/assign_roles_screen.dart';
 import 'package:talawa_design/views/create_events_screen.dart';
 import 'package:talawa_design/views/create_post_screen.dart';
 import 'package:talawa_design/views/edit_profile_scree.dart';
 import 'package:talawa_design/views/event_expand.dart';
 import 'package:talawa_design/views/events_screen.dart';
 import 'package:talawa_design/views/expand_post_screen.dart';
+import 'package:talawa_design/views/join_organization_screen.dart';
 import 'package:talawa_design/views/member_expand.dart';
+import 'package:talawa_design/views/members_registered_events.dart';
 import 'package:talawa_design/views/message_expand.dart';
 import 'package:talawa_design/views/message_list.dart';
 
@@ -28,7 +31,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Wrapper(),
+      home: SplashScreen(),
     );
   }
 }

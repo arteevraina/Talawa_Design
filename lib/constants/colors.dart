@@ -51,3 +51,7 @@ const Color bottomBarColor = Color(0xFFCFCFCF);
 
 // MemberDetails Colors.
 const Color memberColor = Color(0xFF11909E);
+
+//AssignRoles Colors.
+const Color assignRoleBackgroundColor = Color(0xFFE0E0E0);
+const Color assignRolePopupColor = Color(0xFFC5C5C5);

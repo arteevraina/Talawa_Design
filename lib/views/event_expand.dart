@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 // Local imports.
 import 'package:talawa_design/constants/colors.dart';
 import 'package:talawa_design/constants/text_styles.dart';
+import 'package:talawa_design/views/members_registered_events.dart';
 
 class EventExpand extends StatelessWidget {
   @override
@@ -154,31 +155,41 @@ class EventExpand extends StatelessWidget {
                 SizedBox(
                   height: 15.0,
                 ),
-                Container(
-                  padding: EdgeInsets.symmetric(vertical: 15),
-                  width:
-                      MediaQuery.of(context).orientation == Orientation.portrait
-                          ? MediaQuery.of(context).size.width * 0.4
-                          : MediaQuery.of(context).size.width * 0.2,
-                  height:
-                      MediaQuery.of(context).orientation == Orientation.portrait
-                          ? MediaQuery.of(context).size.height * 0.07
-                          : MediaQuery.of(context).size.height * 0.15,
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                      colors: [
-                        buttonColorSetUrl,
-                        buttonColorGradientSetUrl,
-                      ],
-                      begin: Alignment.centerLeft,
-                      end: Alignment.centerRight,
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => MembersRegistered(),
+                      ),
+                    );
+                  },
+                  child: Container(
+                    padding: EdgeInsets.symmetric(vertical: 15),
+                    width: MediaQuery.of(context).orientation ==
+                            Orientation.portrait
+                        ? MediaQuery.of(context).size.width * 0.4
+                        : MediaQuery.of(context).size.width * 0.2,
+                    height: MediaQuery.of(context).orientation ==
+                            Orientation.portrait
+                        ? MediaQuery.of(context).size.height * 0.07
+                        : MediaQuery.of(context).size.height * 0.15,
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        colors: [
+                          buttonColorSetUrl,
+                          buttonColorGradientSetUrl,
+                        ],
+                        begin: Alignment.centerLeft,
+                        end: Alignment.centerRight,
+                      ),
+                      borderRadius: BorderRadius.circular(30),
                     ),
-                    borderRadius: BorderRadius.circular(30),
-                  ),
-                  child: Center(
-                    child: Text(
-                      "12 Members",
-                      style: setUrlButtonTextStyle(),
+                    child: Center(
+                      child: Text(
+                        "12 Members",
+                        style: setUrlButtonTextStyle(),
+                      ),
                     ),
                   ),
                 ),
