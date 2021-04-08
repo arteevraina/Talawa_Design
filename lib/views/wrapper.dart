@@ -7,6 +7,7 @@ import 'package:talawa_design/constants/text_styles.dart';
 import 'package:talawa_design/views/events_screen.dart';
 import 'package:talawa_design/views/home_page_screen.dart';
 import 'package:talawa_design/views/members_screen.dart';
+import 'package:talawa_design/views/message_list.dart';
 
 class Wrapper extends StatefulWidget {
   @override
@@ -46,10 +47,20 @@ class _WrapperState extends State<Wrapper> {
               SizedBox(
                 width: 10.0,
               ),
-              Text(
-                "NewsFeed",
-                style: appBarTextStyle(),
-              ),
+              (selectedIndex == 0)
+                  ? Text(
+                      "NewsFeed",
+                      style: appBarTextStyle(),
+                    )
+                  : (selectedIndex == 1)
+                      ? Text(
+                          "Events",
+                          style: appBarTextStyle(),
+                        )
+                      : Text(
+                          "Members",
+                          style: appBarTextStyle(),
+                        )
             ],
           ),
           actions: [
@@ -58,7 +69,14 @@ class _WrapperState extends State<Wrapper> {
                 Icons.messenger_outline,
                 color: appBarTextIconColor,
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => MessageList(),
+                  ),
+                );
+              },
             ),
           ],
         ),

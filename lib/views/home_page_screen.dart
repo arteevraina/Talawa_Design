@@ -14,8 +14,6 @@ class HomeScreen extends StatelessWidget {
         builder: (context, orientation) {
           return Container(
             padding: EdgeInsets.symmetric(vertical: 15),
-            // width: MediaQuery.of(context).size.width * 0.5,
-            // height: MediaQuery.of(context).size.height * 0.09,
             width: orientation == Orientation.portrait
                 ? MediaQuery.of(context).size.width * 0.4
                 : MediaQuery.of(context).size.width * 0.2,
@@ -25,8 +23,8 @@ class HomeScreen extends StatelessWidget {
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 colors: [
-                  buttonColorSetUrl,
-                  buttonColorGradientSetUrl,
+                  darkerColor,
+                  lighterColor,
                 ],
                 begin: Alignment.centerLeft,
                 end: Alignment.centerRight,

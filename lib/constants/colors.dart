@@ -33,3 +33,18 @@ const Color actionBannerColorNewsFeed = Color(0xFF156E93);
 // Bottom Navigation Bar Colors.
 const Color backgroundColorBNB = Color(0xFF17224D);
 const Color iconColorBNB = Color(0xFFE4FCF9);
+
+// Event Page Colors.
+const Color itemColorEventPage = Color(0xFFE4FCF9);
+const Color eventPageButtonColor = Color(0xFF17224D);
+
+// Floating Button.
+const Color darkerColor = Color(0xFF17224D);
+const Color lighterColor = Color(0xFF1D5F8F);
+
+// SearchBar Colors.
+const Color fillColorSearchBar = Color(0xFFCCC9C9);
+const Color dateColor = Color(0xFF156E93);
+
+// Expand Message Page Colors.
+const Color bottomBarColor = Color(0xFFCFCFCF);

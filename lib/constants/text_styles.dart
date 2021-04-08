@@ -263,3 +263,117 @@ TextStyle drawerlistTileTextStyle() {
     ),
   );
 }
+
+// Events Page TextStyles
+TextStyle eventPageListTitleTextStyle() {
+  return GoogleFonts.montserrat(
+    textStyle: TextStyle(
+      color: itemColorEventPage,
+      fontSize: 15.0,
+      letterSpacing: 0,
+      fontWeight: FontWeight.w500,
+    ),
+  );
+}
+
+TextStyle eventPageListTextStyle() {
+  return GoogleFonts.montserrat(
+    textStyle: TextStyle(
+      color: itemColorEventPage,
+      fontSize: 12.0,
+      letterSpacing: 0,
+      fontWeight: FontWeight.w300,
+    ),
+  );
+}
+
+// MessageList TextStyles.
+TextStyle nameMessageListTextStyle() {
+  return GoogleFonts.montserrat(
+    textStyle: TextStyle(
+      color: appBarColor,
+      fontSize: 16.0,
+      letterSpacing: 0,
+      fontWeight: FontWeight.w600,
+    ),
+  );
+}
+
+TextStyle messageDescriptionTextStyle() {
+  return GoogleFonts.montserrat(
+    textStyle: TextStyle(
+      color: appBarColor,
+      fontSize: 14.0,
+      letterSpacing: 1,
+      fontWeight: FontWeight.w300,
+    ),
+  );
+}
+
+TextStyle dateTextStyle() {
+  return GoogleFonts.montserrat(
+    textStyle: TextStyle(
+      color: dateColor,
+      fontSize: 10.0,
+      letterSpacing: 0,
+      fontWeight: FontWeight.w300,
+    ),
+  );
+}
+
+// Message Expand TextStyles.
+TextStyle dividerStyle() {
+  return GoogleFonts.montserrat(
+    textStyle: TextStyle(
+      color: dateColor,
+      fontSize: 15.0,
+      letterSpacing: 0,
+      fontWeight: FontWeight.w300,
+    ),
+  );
+}
+
+TextStyle messageExpandListTextStyle() {
+  return GoogleFonts.montserrat(
+    textStyle: TextStyle(
+      color: appBarColor,
+      fontSize: 15.0,
+      letterSpacing: 0,
+      fontWeight: FontWeight.w600,
+    ),
+  );
+}
+
+TextStyle messageExpandTitleTextStyle() {
+  return GoogleFonts.montserrat(
+    textStyle: TextStyle(
+      color: appBarColor,
+      fontSize: 20.0,
+      letterSpacing: 0,
+      fontWeight: FontWeight.w300,
+    ),
+  );
+}
+
+TextStyle messageDescriptonTextStyle() {
+  return GoogleFonts.montserrat(
+    textStyle: TextStyle(
+      color: appBarColor,
+      fontSize: 15.0,
+      letterSpacing: 0,
+      fontWeight: FontWeight.w300,
+    ),
+  );
+}
+
+// CreateEvents TextStyle.
+TextStyle createEventRoleLabelTextStyle() {
+  return GoogleFonts.montserrat(
+    textStyle: TextStyle(
+      color: scaffoldColor,
+      fontSize: 15.0,
+      letterSpacing: 0,
+      fontWeight: FontWeight.normal,
+    ),
+  );
+}
