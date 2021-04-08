@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 // Local imports.
 import 'package:talawa_design/constants/text_styles.dart';
 import 'package:talawa_design/constants/colors.dart';
+import 'package:talawa_design/views/expand_post_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -45,104 +46,115 @@ class HomeScreen extends StatelessWidget {
         itemBuilder: (context, index) {
           return Padding(
             padding: const EdgeInsets.all(10.0),
-            child: Card(
-              child: Padding(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 25.0,
-                ),
-                child: Container(
-                  child: Column(
-                    children: [
-                      SizedBox(
-                        height: 10.0,
-                      ),
-                      Row(
-                        children: [
-                          CircleAvatar(
-                            child: Image.asset("assets/logo.png"),
-                          ),
-                          SizedBox(
-                            width: 10.0,
-                          ),
-                          Text(
-                            "Arteev Raina",
-                            style: postNameTextStyle(),
-                          ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 20.0,
-                      ),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Align(
-                            alignment: Alignment.topLeft,
-                            child: Text(
-                              "Post Title",
-                              style: postTitleTextStyle(),
+            child: GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ExpandPost(),
+                  ),
+                );
+              },
+              child: Card(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 25.0,
+                  ),
+                  child: Container(
+                    child: Column(
+                      children: [
+                        SizedBox(
+                          height: 10.0,
+                        ),
+                        Row(
+                          children: [
+                            CircleAvatar(
+                              child: Image.asset("assets/logo.png"),
                             ),
-                          ),
-                          SizedBox(
-                            height: 10.0,
-                          ),
-                          Text(
-                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                            style: postDescriptionTextStyle(),
-                          ),
-                          SizedBox(
-                            height: 30.0,
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.fromLTRB(
-                              0,
-                              0,
-                              0,
-                              10.0,
+                            SizedBox(
+                              width: 10.0,
                             ),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Row(
-                                  children: [
-                                    Icon(
-                                      Icons.thumb_up_alt,
-                                      color: nameColorNewsFeed,
-                                    ),
-                                    SizedBox(
-                                      width: 30.0,
-                                    ),
-                                    Icon(
-                                      Icons.comment,
-                                      color: nameColorNewsFeed,
-                                    ),
-                                  ],
-                                ),
-                                SizedBox(
-                                  width: 20.0,
-                                ),
-                                Row(
-                                  children: [
-                                    Text(
-                                      "12 Likes",
-                                      style: likeCommentTextStyle(),
-                                    ),
-                                    SizedBox(
-                                      width: 20.0,
-                                    ),
-                                    Text(
-                                      "3 Comments",
-                                      style: likeCommentTextStyle(),
-                                    ),
-                                  ],
-                                )
-                              ],
+                            Text(
+                              "Arteev Raina",
+                              style: postNameTextStyle(),
                             ),
-                          )
-                        ],
-                      ),
-                    ],
+                          ],
+                        ),
+                        SizedBox(
+                          height: 20.0,
+                        ),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Align(
+                              alignment: Alignment.topLeft,
+                              child: Text(
+                                "Post Title",
+                                style: postTitleTextStyle(),
+                              ),
+                            ),
+                            SizedBox(
+                              height: 10.0,
+                            ),
+                            Text(
+                              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                              style: postDescriptionTextStyle(),
+                            ),
+                            SizedBox(
+                              height: 30.0,
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.fromLTRB(
+                                0,
+                                0,
+                                0,
+                                10.0,
+                              ),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Row(
+                                    children: [
+                                      Icon(
+                                        Icons.thumb_up_alt,
+                                        color: nameColorNewsFeed,
+                                      ),
+                                      SizedBox(
+                                        width: 30.0,
+                                      ),
+                                      Icon(
+                                        Icons.comment,
+                                        color: nameColorNewsFeed,
+                                      ),
+                                    ],
+                                  ),
+                                  SizedBox(
+                                    width: 20.0,
+                                  ),
+                                  Row(
+                                    children: [
+                                      Text(
+                                        "12 Likes",
+                                        style: likeCommentTextStyle(),
+                                      ),
+                                      SizedBox(
+                                        width: 20.0,
+                                      ),
+                                      Text(
+                                        "3 Comments",
+                                        style: likeCommentTextStyle(),
+                                      ),
+                                    ],
+                                  )
+                                ],
+                              ),
+                            )
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),

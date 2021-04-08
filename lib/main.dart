@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:talawa_design/views/create_events_screen.dart';
 import 'package:talawa_design/views/events_screen.dart';
+import 'package:talawa_design/views/expand_post_screen.dart';
 import 'package:talawa_design/views/message_expand.dart';
 import 'package:talawa_design/views/message_list.dart';
 

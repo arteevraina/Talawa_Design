@@ -9,7 +9,6 @@ import 'package:talawa_design/constants/text_styles.dart';
 class CreateEvent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
     return Scaffold(
       appBar: AppBar(
         backgroundColor: appBarColor,

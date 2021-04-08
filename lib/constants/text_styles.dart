@@ -377,3 +377,37 @@ TextStyle createEventRoleLabelTextStyle() {
     ),
   );
 }
+
+// Expand Post Textstyle.
+TextStyle expandPostTitleTextStyle() {
+  return GoogleFonts.montserrat(
+    textStyle: TextStyle(
+      color: appBarColor,
+      fontSize: 20.0,
+      letterSpacing: 0,
+      fontWeight: FontWeight.w500,
+    ),
+  );
+}
+
+TextStyle commenterNameTextStyle() {
+  return GoogleFonts.montserrat(
+    textStyle: TextStyle(
+      color: appBarColor,
+      fontSize: 18.0,
+      letterSpacing: 0,
+      fontWeight: FontWeight.w300,
+    ),
+  );
+}
+
+TextStyle commentTextStyle() {
+  return GoogleFonts.montserrat(
+    textStyle: TextStyle(
+      color: appBarColor,
+      fontSize: 15.0,
+      letterSpacing: 0,
+      fontWeight: FontWeight.w200,
+    ),
+  );
+}
