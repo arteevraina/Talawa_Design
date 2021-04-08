@@ -190,9 +190,9 @@ TextStyle likeCommentTextStyle() {
   return GoogleFonts.montserrat(
     textStyle: TextStyle(
       color: nameColorNewsFeed,
-      fontSize: 15.0,
+      fontSize: 12.0,
       letterSpacing: 0,
-      fontWeight: FontWeight.w500,
+      fontWeight: FontWeight.w300,
     ),
   );
 }
@@ -408,6 +408,120 @@ TextStyle commentTextStyle() {
       fontSize: 15.0,
       letterSpacing: 0,
       fontWeight: FontWeight.w200,
+    ),
+  );
+}
+
+// Event Expand Page TextStyles.
+TextStyle eventTitleTextStyle() {
+  return GoogleFonts.montserrat(
+    textStyle: TextStyle(
+      color: appBarColor,
+      fontSize: 28.0,
+      letterSpacing: 0,
+      fontWeight: FontWeight.w500,
+    ),
+  );
+}
+
+TextStyle eventsubTitleTextStyle() {
+  return GoogleFonts.montserrat(
+    textStyle: TextStyle(
+      color: appBarColor,
+      fontSize: 20.0,
+      letterSpacing: 0,
+      fontWeight: FontWeight.w300,
+    ),
+  );
+}
+
+TextStyle eventDescriptionTextStyle() {
+  return GoogleFonts.montserrat(
+    textStyle: TextStyle(
+      color: appBarColor,
+      fontSize: 15.0,
+      letterSpacing: 0,
+      height: 1.5,
+      fontWeight: FontWeight.w300,
+    ),
+  );
+}
+
+// Create Post Text Style
+TextStyle createPostButtonTextStyle() {
+  return GoogleFonts.montserrat(
+    textStyle: TextStyle(
+      color: scaffoldColor,
+      fontSize: 22.0,
+      letterSpacing: 2,
+      fontWeight: FontWeight.normal,
+    ),
+  );
+}
+
+TextStyle createPostNameTitleTextStyle() {
+  return GoogleFonts.montserrat(
+    textStyle: TextStyle(
+      color: appBarColor,
+      fontSize: 18.0,
+      letterSpacing: 0,
+      fontWeight: FontWeight.bold,
+    ),
+  );
+}
+
+// Member Details Text Styles.
+TextStyle nameTitleMemberDetails() {
+  return GoogleFonts.montserrat(
+    textStyle: TextStyle(
+      color: appBarColor,
+      fontSize: 22.0,
+      letterSpacing: 0,
+      fontWeight: FontWeight.bold,
+    ),
+  );
+}
+
+TextStyle subTitleMemberDetails() {
+  return GoogleFonts.montserrat(
+    textStyle: TextStyle(
+      color: appBarColor,
+      fontSize: 18.0,
+      letterSpacing: 0,
+      fontWeight: FontWeight.w400,
+    ),
+  );
+}
+
+TextStyle labelMemberDetails() {
+  return GoogleFonts.montserrat(
+    textStyle: TextStyle(
+      color: appBarColor,
+      fontSize: 15.0,
+      letterSpacing: 0,
+      fontWeight: FontWeight.w700,
+    ),
+  );
+}
+
+TextStyle roleMemberDetails() {
+  return GoogleFonts.montserrat(
+    textStyle: TextStyle(
+      color: appBarColor,
+      fontSize: 15.0,
+      letterSpacing: 0,
+      fontWeight: FontWeight.w400,
+    ),
+  );
+}
+
+TextStyle eventsMemberDetails() {
+  return GoogleFonts.montserrat(
+    textStyle: TextStyle(
+      color: scaffoldColor,
+      fontSize: 15.0,
+      letterSpacing: 0,
+      fontWeight: FontWeight.w500,
     ),
   );
 }

@@ -48,3 +48,6 @@ const Color dateColor = Color(0xFF156E93);
 
 // Expand Message Page Colors.
 const Color bottomBarColor = Color(0xFFCFCFCF);
+
+// MemberDetails Colors.
+const Color memberColor = Color(0xFF11909E);

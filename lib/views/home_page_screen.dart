@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 // Local imports.
 import 'package:talawa_design/constants/text_styles.dart';
 import 'package:talawa_design/constants/colors.dart';
+import 'package:talawa_design/views/create_post_screen.dart';
 import 'package:talawa_design/views/expand_post_screen.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -13,36 +14,48 @@ class HomeScreen extends StatelessWidget {
       backgroundColor: scaffoldColor,
       floatingActionButton: OrientationBuilder(
         builder: (context, orientation) {
-          return Container(
-            padding: EdgeInsets.symmetric(vertical: 15),
-            width: orientation == Orientation.portrait
-                ? MediaQuery.of(context).size.width * 0.4
-                : MediaQuery.of(context).size.width * 0.2,
-            height: orientation == Orientation.portrait
-                ? MediaQuery.of(context).size.height * 0.08
-                : MediaQuery.of(context).size.height * 0.15,
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                colors: [
-                  darkerColor,
-                  lighterColor,
-                ],
-                begin: Alignment.centerLeft,
-                end: Alignment.centerRight,
+          return GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => CreatePost(),
+                ),
+              );
+            },
+            child: Container(
+              padding: EdgeInsets.symmetric(vertical: 15),
+              width: orientation == Orientation.portrait
+                  ? MediaQuery.of(context).size.width * 0.4
+                  : MediaQuery.of(context).size.width * 0.2,
+              height: orientation == Orientation.portrait
+                  ? MediaQuery.of(context).size.height * 0.08
+                  : MediaQuery.of(context).size.height * 0.15,
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [
+                    darkerColor,
+                    lighterColor,
+                  ],
+                  begin: Alignment.centerLeft,
+                  end: Alignment.centerRight,
+                ),
+                // color: buttonColor,
+                borderRadius: BorderRadius.circular(30),
               ),
-              // color: buttonColor,
-              borderRadius: BorderRadius.circular(30),
-            ),
-            child: Center(
-              child: Text(
-                "Create Post",
-                style: setUrlButtonTextStyle(),
+              child: Center(
+                child: Text(
+                  "Create Post",
+                  style: setUrlButtonTextStyle(),
+                ),
               ),
             ),
           );
         },
       ),
       body: ListView.separated(
+        shrinkWrap: true,
+        physics: BouncingScrollPhysics(),
         itemBuilder: (context, index) {
           return Padding(
             padding: const EdgeInsets.all(10.0),
@@ -56,6 +69,7 @@ class HomeScreen extends StatelessWidget {
                 );
               },
               child: Card(
+                margin: EdgeInsets.all(10.0),
                 child: Padding(
                   padding: const EdgeInsets.symmetric(
                     horizontal: 25.0,
@@ -97,9 +111,12 @@ class HomeScreen extends StatelessWidget {
                             SizedBox(
                               height: 10.0,
                             ),
-                            Text(
-                              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                              style: postDescriptionTextStyle(),
+                            RichText(
+                              text: TextSpan(
+                                text:
+                                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+                                style: postDescriptionTextStyle(),
+                              ),
                             ),
                             SizedBox(
                               height: 30.0,
@@ -140,7 +157,7 @@ class HomeScreen extends StatelessWidget {
                                         style: likeCommentTextStyle(),
                                       ),
                                       SizedBox(
-                                        width: 20.0,
+                                        width: 10.0,
                                       ),
                                       Text(
                                         "3 Comments",

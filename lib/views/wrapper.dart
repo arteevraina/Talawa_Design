@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 // Local imports.
 import 'package:talawa_design/constants/colors.dart';
 import 'package:talawa_design/constants/text_styles.dart';
+import 'package:talawa_design/views/edit_profile_scree.dart';
 import 'package:talawa_design/views/events_screen.dart';
 import 'package:talawa_design/views/home_page_screen.dart';
 import 'package:talawa_design/views/members_screen.dart';
@@ -128,14 +129,24 @@ class _WrapperState extends State<Wrapper> {
                 ),
               ),
               Divider(),
-              ListTile(
-                title: Text(
-                  "Your Profile / Edit Profile",
-                  style: drawerlistTileTextStyle(),
-                ),
-                trailing: Icon(
-                  Icons.edit_outlined,
-                  color: backgroundColorBNB,
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => EditProfile(),
+                    ),
+                  );
+                },
+                child: ListTile(
+                  title: Text(
+                    "Your Profile / Edit Profile",
+                    style: drawerlistTileTextStyle(),
+                  ),
+                  trailing: Icon(
+                    Icons.edit_outlined,
+                    color: backgroundColorBNB,
+                  ),
                 ),
               ),
               ListTile(
@@ -169,14 +180,15 @@ class _WrapperState extends State<Wrapper> {
                 ),
               ),
               ListTile(
-                  title: Text(
-                    "About Talawa",
-                    style: drawerlistTileTextStyle(),
-                  ),
-                  trailing: Image.asset(
-                    "assets/logo.png",
-                    width: 35.0,
-                  )),
+                title: Text(
+                  "About Talawa",
+                  style: drawerlistTileTextStyle(),
+                ),
+                trailing: Image.asset(
+                  "assets/logo.png",
+                  width: 35.0,
+                ),
+              ),
             ],
           ),
         ),

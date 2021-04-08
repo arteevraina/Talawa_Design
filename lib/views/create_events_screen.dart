@@ -1,6 +1,5 @@
 // Package imports.
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 // Local imports.
 import 'package:talawa_design/constants/colors.dart';
@@ -10,6 +9,7 @@ class CreateEvent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: scaffoldColor,
       appBar: AppBar(
         backgroundColor: appBarColor,
         title: Row(
@@ -330,65 +330,61 @@ class CreateEvent extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    OrientationBuilder(
-                      builder: (context, orientation) {
-                        return Container(
-                          padding: EdgeInsets.symmetric(vertical: 15),
-                          width: orientation == Orientation.portrait
-                              ? MediaQuery.of(context).size.width * 0.4
-                              : MediaQuery.of(context).size.width * 0.01,
-                          height: orientation == Orientation.portrait
-                              ? MediaQuery.of(context).size.height * 0.08
-                              : MediaQuery.of(context).size.height * 0.15,
-                          decoration: BoxDecoration(
-                            gradient: LinearGradient(
-                              colors: [
-                                buttonColorSetUrl,
-                                buttonColorGradientSetUrl,
-                              ],
-                              begin: Alignment.centerLeft,
-                              end: Alignment.centerRight,
-                            ),
-                            borderRadius: BorderRadius.circular(30),
-                          ),
-                          child: Center(
-                            child: Text(
-                              "Manage Roles",
-                              style: setUrlButtonTextStyle(),
-                            ),
-                          ),
-                        );
-                      },
+                    Container(
+                      padding: EdgeInsets.symmetric(vertical: 15),
+                      width: MediaQuery.of(context).orientation ==
+                              Orientation.portrait
+                          ? MediaQuery.of(context).size.width * 0.4
+                          : MediaQuery.of(context).size.width * 0.2,
+                      height: MediaQuery.of(context).orientation ==
+                              Orientation.portrait
+                          ? MediaQuery.of(context).size.height * 0.08
+                          : MediaQuery.of(context).size.height * 0.15,
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                          colors: [
+                            buttonColorSetUrl,
+                            buttonColorGradientSetUrl,
+                          ],
+                          begin: Alignment.centerLeft,
+                          end: Alignment.centerRight,
+                        ),
+                        borderRadius: BorderRadius.circular(30),
+                      ),
+                      child: Center(
+                        child: Text(
+                          "Manage Roles",
+                          style: setUrlButtonTextStyle(),
+                        ),
+                      ),
                     ),
-                    OrientationBuilder(
-                      builder: (context, orientation) {
-                        return Container(
-                          padding: EdgeInsets.symmetric(vertical: 15),
-                          width: orientation == Orientation.portrait
-                              ? MediaQuery.of(context).size.width * 0.4
-                              : MediaQuery.of(context).size.width * 0.01,
-                          height: orientation == Orientation.portrait
-                              ? MediaQuery.of(context).size.height * 0.08
-                              : MediaQuery.of(context).size.height * 0.15,
-                          decoration: BoxDecoration(
-                            gradient: LinearGradient(
-                              colors: [
-                                buttonColorSetUrl,
-                                buttonColorGradientSetUrl,
-                              ],
-                              begin: Alignment.centerLeft,
-                              end: Alignment.centerRight,
-                            ),
-                            borderRadius: BorderRadius.circular(30),
-                          ),
-                          child: Center(
-                            child: Text(
-                              "Post Event",
-                              style: setUrlButtonTextStyle(),
-                            ),
-                          ),
-                        );
-                      },
+                    Container(
+                      padding: EdgeInsets.symmetric(vertical: 15),
+                      width: MediaQuery.of(context).orientation ==
+                              Orientation.portrait
+                          ? MediaQuery.of(context).size.width * 0.4
+                          : MediaQuery.of(context).size.width * 0.2,
+                      height: MediaQuery.of(context).orientation ==
+                              Orientation.portrait
+                          ? MediaQuery.of(context).size.height * 0.08
+                          : MediaQuery.of(context).size.height * 0.15,
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                          colors: [
+                            buttonColorSetUrl,
+                            buttonColorGradientSetUrl,
+                          ],
+                          begin: Alignment.centerLeft,
+                          end: Alignment.centerRight,
+                        ),
+                        borderRadius: BorderRadius.circular(30),
+                      ),
+                      child: Center(
+                        child: Text(
+                          "Post Event",
+                          style: setUrlButtonTextStyle(),
+                        ),
+                      ),
                     ),
                   ],
                 )
