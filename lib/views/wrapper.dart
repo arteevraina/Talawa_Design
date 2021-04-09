@@ -8,6 +8,7 @@ import 'package:talawa_design/views/edit_profile_scree.dart';
 import 'package:talawa_design/views/events_screen.dart';
 import 'package:talawa_design/views/home_page_screen.dart';
 import 'package:talawa_design/views/join_organization_screen.dart';
+import 'package:talawa_design/views/login_screen.dart';
 import 'package:talawa_design/views/members_screen.dart';
 import 'package:talawa_design/views/message_list.dart';
 
@@ -180,14 +181,24 @@ class _WrapperState extends State<Wrapper> {
                   color: backgroundColorBNB,
                 ),
               ),
-              ListTile(
-                title: Text(
-                  "Logout",
-                  style: drawerlistTileTextStyle(),
-                ),
-                trailing: Icon(
-                  Icons.logout,
-                  color: backgroundColorBNB,
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => LoginScreen(),
+                    ),
+                  );
+                },
+                child: ListTile(
+                  title: Text(
+                    "Logout",
+                    style: drawerlistTileTextStyle(),
+                  ),
+                  trailing: Icon(
+                    Icons.logout,
+                    color: backgroundColorBNB,
+                  ),
                 ),
               ),
               ListTile(
