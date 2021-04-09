@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 // Local imports.
 import 'package:talawa_design/constants/text_styles.dart';
 import 'package:talawa_design/constants/colors.dart';
-import 'package:talawa_design/views/create_post_screen.dart';
-import 'package:talawa_design/views/expand_post_screen.dart';
+import 'package:talawa_design/views/newsfeed/create_post_screen.dart';
+import 'package:talawa_design/views/newsfeed/expand_post_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   @override

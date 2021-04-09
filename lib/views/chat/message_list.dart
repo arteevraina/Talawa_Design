@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:talawa_design/constants/colors.dart';
 import 'package:talawa_design/constants/text_styles.dart';
 import 'package:talawa_design/components/search_box.dart';
-import 'package:talawa_design/views/message_expand.dart';
+import 'package:talawa_design/views/chat/message_expand.dart';
 
 class MessageList extends StatelessWidget {
   @override

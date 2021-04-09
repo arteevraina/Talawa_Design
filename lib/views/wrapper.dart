@@ -4,13 +4,13 @@ import 'package:flutter/material.dart';
 // Local imports.
 import 'package:talawa_design/constants/colors.dart';
 import 'package:talawa_design/constants/text_styles.dart';
-import 'package:talawa_design/views/edit_profile_scree.dart';
-import 'package:talawa_design/views/events_screen.dart';
-import 'package:talawa_design/views/home_page_screen.dart';
-import 'package:talawa_design/views/join_organization_screen.dart';
-import 'package:talawa_design/views/login_screen.dart';
-import 'package:talawa_design/views/members_screen.dart';
-import 'package:talawa_design/views/message_list.dart';
+import 'package:talawa_design/views/members/edit_profile_screen.dart';
+import 'package:talawa_design/views/events/events_screen.dart';
+import 'package:talawa_design/views/newsfeed/home_page_screen.dart';
+import 'package:talawa_design/views/organization/join_organization_screen.dart';
+import 'package:talawa_design/views/authentication/login_screen.dart';
+import 'package:talawa_design/views/members/members_screen.dart';
+import 'package:talawa_design/views/chat/message_list.dart';
 
 class Wrapper extends StatefulWidget {
   @override
@@ -104,6 +104,29 @@ class _WrapperState extends State<Wrapper> {
                         ),
                       ],
                     ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Align(
+                          alignment: Alignment.bottomRight,
+                          child: Text(
+                            "Dark",
+                            style: drawerlistTileTextStyle(),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 5.0,
+                        ),
+                        Icon(
+                          Icons.toggle_off_outlined,
+                          color: appBarColor,
+                          size: 35.0,
+                        ),
+                        SizedBox(
+                          width: 30.0,
+                        )
+                      ],
+                    ),
                   ],
                 ),
               ),
@@ -169,16 +192,6 @@ class _WrapperState extends State<Wrapper> {
                     Icons.card_membership_outlined,
                     color: backgroundColorBNB,
                   ),
-                ),
-              ),
-              ListTile(
-                title: Text(
-                  "Create Organization",
-                  style: drawerlistTileTextStyle(),
-                ),
-                trailing: Icon(
-                  Icons.add_box,
-                  color: backgroundColorBNB,
                 ),
               ),
               GestureDetector(

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 // Local imports.
 import 'package:talawa_design/constants/colors.dart';
 import 'package:talawa_design/constants/text_styles.dart';
-import 'package:talawa_design/views/member_expand.dart';
+import 'package:talawa_design/views/members/member_expand.dart';
 
 class MembersScreen extends StatelessWidget {
   @override

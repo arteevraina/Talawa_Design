@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 // Local imports.
 import 'package:talawa_design/constants/colors.dart';
 import 'package:talawa_design/constants/text_styles.dart';
-import 'package:talawa_design/views/members_registered_events.dart';
+import 'package:talawa_design/views/members/members_registered_events.dart';
 
 class EventExpand extends StatelessWidget {
   @override

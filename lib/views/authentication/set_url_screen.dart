@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:talawa_design/constants/text_styles.dart';
 import 'package:talawa_design/constants/colors.dart';
 import 'package:talawa_design/components/text_box.dart';
-import 'package:talawa_design/views/register_screen.dart';
+import 'package:talawa_design/views/authentication/register_screen.dart';
 
 class SetURLScreen extends StatelessWidget {
   @override

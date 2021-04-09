@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 // Local imports.
 import 'package:talawa_design/constants/colors.dart';
 import 'package:talawa_design/constants/text_styles.dart';
-import 'package:talawa_design/views/assign_roles_screen.dart';
+import 'package:talawa_design/views/events/assign_roles_screen.dart';
 
 class CreateEvent extends StatelessWidget {
   @override

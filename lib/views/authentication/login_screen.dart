@@ -5,9 +5,10 @@ import 'package:flutter/material.dart';
 import 'package:talawa_design/constants/text_styles.dart';
 import 'package:talawa_design/constants/colors.dart';
 import 'package:talawa_design/components/text_box.dart';
-import 'package:talawa_design/views/login_screen.dart';
+import 'package:talawa_design/views/authentication/register_screen.dart';
+import 'package:talawa_design/views/wrapper.dart';
 
-class RegisterScreen extends StatelessWidget {
+class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,9 +25,7 @@ class RegisterScreen extends StatelessWidget {
                 child: Align(
                   alignment: Alignment.topCenter,
                   child: Image(
-                    image: AssetImage(
-                      "assets/logo.png",
-                    ),
+                    image: AssetImage("assets/logo.png"),
                     width: MediaQuery.of(context).orientation ==
                             Orientation.portrait
                         ? MediaQuery.of(context).size.width * 0.8
@@ -50,7 +49,7 @@ class RegisterScreen extends StatelessWidget {
                     style: loginScreenTitleTextStyle(),
                   ),
                   Text(
-                    "Register",
+                    "Login",
                     style: loginScreenSubTitleTextStyle(),
                   ),
                   SizedBox(
@@ -84,29 +83,14 @@ class RegisterScreen extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: 10.0,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 20.0,
-                    ),
-                    child: TextBox(
-                      "Confirm Password",
-                      Icon(
-                        Icons.security,
-                        color: titleColorLoginScreen,
-                      ),
-                    ),
-                  ),
-                  SizedBox(
                     height: 20.0,
                   ),
                   GestureDetector(
                     onTap: () {
-                      Navigator.pushReplacement(
+                      Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => LoginScreen(),
+                          builder: (context) => Wrapper(),
                         ),
                       );
                     },
@@ -134,7 +118,7 @@ class RegisterScreen extends StatelessWidget {
                       ),
                       child: Center(
                         child: Text(
-                          "Register",
+                          "Login",
                           style: loginScreenButtonTextStyle(),
                         ),
                       ),
@@ -145,10 +129,10 @@ class RegisterScreen extends StatelessWidget {
                   ),
                   GestureDetector(
                     onTap: () {
-                      Navigator.pushReplacement(
+                      Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => LoginScreen(),
+                          builder: (context) => RegisterScreen(),
                         ),
                       );
                     },
@@ -156,14 +140,14 @@ class RegisterScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          "Already Registered ?",
+                          "Not Registered ?",
                           style: loginScreenTextLeftTextStyle(),
                         ),
                         SizedBox(
                           width: 5.0,
                         ),
                         Text(
-                          "Login !",
+                          "Sign Up !",
                           style: loginScreenTextRightTextStyle(),
                         ),
                       ],

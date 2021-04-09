@@ -246,9 +246,9 @@ TextStyle drawersubsubTitleTextStyle() {
   return GoogleFonts.montserrat(
     textStyle: TextStyle(
       color: titleColorSetUrl,
-      fontSize: 20.0,
+      fontSize: 18.0,
       letterSpacing: 0,
-      fontWeight: FontWeight.w200,
+      fontWeight: FontWeight.w300,
     ),
   );
 }

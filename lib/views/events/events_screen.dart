@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 // Local imports.
 import 'package:talawa_design/constants/colors.dart';
 import 'package:talawa_design/constants/text_styles.dart';
-import 'package:talawa_design/views/create_events_screen.dart';
-import 'package:talawa_design/views/event_expand.dart';
+import 'package:talawa_design/views/events/create_events_screen.dart';
+import 'package:talawa_design/views/events/event_expand.dart';
 
 class EventsScreen extends StatelessWidget {
   @override
