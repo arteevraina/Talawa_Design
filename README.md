@@ -1,10 +1,15 @@
-# talawa_design
+# Talawa Design UI
 
-A new Flutter project.
+[![forthebadge](https://forthebadge.com/images/badges/open-source.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/built-by-developers.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
+
+<img src="assets/logo.png" width="200" width="200">
+
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+This is the UI built in Flutter according to Figma Mockups for the Palisadoes Foundation GSoC application.
 
 A few resources to get you started if this is your first Flutter project:
 
