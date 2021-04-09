@@ -216,6 +216,16 @@ class _WrapperState extends State<Wrapper> {
               ),
               ListTile(
                 title: Text(
+                  "Change Language",
+                  style: drawerlistTileTextStyle(),
+                ),
+                trailing: Icon(
+                  Icons.language,
+                  color: backgroundColorBNB,
+                ),
+              ),
+              ListTile(
+                title: Text(
                   "About Talawa",
                   style: drawerlistTileTextStyle(),
                 ),
