@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 // Local imports.
 import 'package:talawa_design/constants/colors.dart';
 import 'package:talawa_design/constants/text_styles.dart';
+import 'package:talawa_design/select_language_screen.dart';
 import 'package:talawa_design/views/members/edit_profile_screen.dart';
 import 'package:talawa_design/views/events/events_screen.dart';
 import 'package:talawa_design/views/newsfeed/home_page_screen.dart';
@@ -214,14 +215,27 @@ class _WrapperState extends State<Wrapper> {
                   ),
                 ),
               ),
-              ListTile(
-                title: Text(
-                  "Change Language",
-                  style: drawerlistTileTextStyle(),
-                ),
-                trailing: Icon(
-                  Icons.language,
-                  color: backgroundColorBNB,
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => SelectLanguage(
+                        false,
+                        true,
+                      ),
+                    ),
+                  );
+                },
+                child: ListTile(
+                  title: Text(
+                    "Change Language",
+                    style: drawerlistTileTextStyle(),
+                  ),
+                  trailing: Icon(
+                    Icons.language,
+                    color: backgroundColorBNB,
+                  ),
                 ),
               ),
               ListTile(

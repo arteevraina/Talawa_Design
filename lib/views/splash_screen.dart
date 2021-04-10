@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 // Local imports.
 import 'package:talawa_design/constants/colors.dart';
 import 'package:talawa_design/constants/text_styles.dart';
-import 'package:talawa_design/views/authentication/set_url_screen.dart';
+import 'package:talawa_design/select_language_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -23,7 +23,10 @@ class _SplashScreenState extends State<SplashScreen> {
       () => Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-          builder: (context) => SetURLScreen(),
+          builder: (context) => SelectLanguage(
+            true,
+            false,
+          ),
         ),
       ),
     );
