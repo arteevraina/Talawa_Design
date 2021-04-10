@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 // Local imports.
 import 'package:talawa_design/constants/colors.dart';
 import 'package:talawa_design/constants/text_styles.dart';
-import 'package:talawa_design/select_language_screen.dart';
+import 'package:talawa_design/views/authentication/select_language_screen.dart';
 import 'package:talawa_design/views/members/edit_profile_screen.dart';
 import 'package:talawa_design/views/events/events_screen.dart';
 import 'package:talawa_design/views/newsfeed/home_page_screen.dart';

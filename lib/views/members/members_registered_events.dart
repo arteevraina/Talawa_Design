@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:talawa_design/constants/colors.dart';
 import 'package:talawa_design/constants/text_styles.dart';
 import 'package:talawa_design/components/search_box.dart';
+import 'package:talawa_design/views/members/member_expand.dart';
 
 class MembersRegistered extends StatelessWidget {
   @override
@@ -44,68 +45,78 @@ class MembersRegistered extends StatelessWidget {
                   shrinkWrap: true,
                   physics: BouncingScrollPhysics(),
                   itemBuilder: (context, index) {
-                    return Container(
-                      decoration: BoxDecoration(
-                        gradient: LinearGradient(
-                          colors: [
-                            buttonColorSetUrl,
-                            buttonColorGradientSetUrl,
-                          ],
-                          begin: Alignment.centerLeft,
-                          end: Alignment.centerRight,
+                    return GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => MemberExpand(),
+                          ),
+                        );
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                          gradient: LinearGradient(
+                            colors: [
+                              buttonColorSetUrl,
+                              buttonColorGradientSetUrl,
+                            ],
+                            begin: Alignment.centerLeft,
+                            end: Alignment.centerRight,
+                          ),
+                          borderRadius: BorderRadius.circular(10),
                         ),
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            Container(
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.all(
-                                  Radius.circular(30),
+                        child: Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Container(
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.all(
+                                    Radius.circular(30),
+                                  ),
+                                  border: Border.all(
+                                    color: itemColorEventPage,
+                                  ),
                                 ),
-                                border: Border.all(
-                                  color: itemColorEventPage,
-                                ),
-                              ),
-                              child: Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Text(
-                                  "Ayush Raina",
-                                  style: eventPageListTitleTextStyle(),
-                                ),
-                              ),
-                            ),
-                            Container(
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.all(
-                                  Radius.circular(30),
-                                ),
-                                border: Border.all(
-                                  color: itemColorEventPage,
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Text(
+                                    "Ayush Raina",
+                                    style: eventPageListTitleTextStyle(),
+                                  ),
                                 ),
                               ),
-                              child: Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Text(
-                                  "Admin",
-                                  style: eventPageListTextStyle(),
+                              Container(
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.all(
+                                    Radius.circular(30),
+                                  ),
+                                  border: Border.all(
+                                    color: itemColorEventPage,
+                                  ),
+                                ),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Text(
+                                    "Admin",
+                                    style: eventPageListTextStyle(),
+                                  ),
                                 ),
                               ),
-                            ),
-                            Container(
-                              width: 50.0,
-                              height: 50.0,
-                              child: CircleAvatar(
-                                backgroundColor: itemColorEventPage,
-                                child: Image.asset(
-                                  "assets/logo.png",
+                              Container(
+                                width: 50.0,
+                                height: 50.0,
+                                child: CircleAvatar(
+                                  backgroundColor: itemColorEventPage,
+                                  child: Image.asset(
+                                    "assets/logo.png",
+                                  ),
                                 ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ),
                     );

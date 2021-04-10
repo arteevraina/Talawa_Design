@@ -11,7 +11,10 @@ class SelectLanguage extends StatelessWidget {
   final bool isNavigatedFromSplash;
   final bool isNavigatedFromSideDrawer;
 
-  SelectLanguage(this.isNavigatedFromSplash, this.isNavigatedFromSideDrawer);
+  SelectLanguage(
+    this.isNavigatedFromSplash,
+    this.isNavigatedFromSideDrawer,
+  );
   @override
   Widget build(BuildContext context) {
     return Scaffold(

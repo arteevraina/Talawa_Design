@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 // Local imports.
 import 'package:talawa_design/constants/colors.dart';
 import 'package:talawa_design/constants/text_styles.dart';
-import 'package:talawa_design/select_language_screen.dart';
+import 'package:talawa_design/views/authentication/select_language_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   @override

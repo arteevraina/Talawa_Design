@@ -25,7 +25,7 @@ class MessageExpand extends StatelessWidget {
                 width: 10.0,
               ),
               Text(
-                "Arteev",
+                "Arteev Raina",
                 style: appBarTextStyle(),
               ),
             ],
