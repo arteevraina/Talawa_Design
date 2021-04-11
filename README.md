@@ -7,15 +7,20 @@
 <img src="assets/logo.png" width="200" width="200">
 
 
-## Getting Started
+## Abstract
 
-This is the UI built in Flutter according to Figma Mockups for the Palisadoes Foundation GSoC application.
+This is the UI built in Flutter according to Figma Mockups for the Palisadoes Foundation GSoC application. <br/>
+Download the apk here : https://drive.google.com/file/d/1xNeCCHnJTe-ZBsQ6TKjkLAI4lQE8HzO0/view?usp=sharing.
 
-A few resources to get you started if this is your first Flutter project:
+## Dependencies used 🧰
+* [google_fonts](https://pub.dev/packages/google_fonts) (for getting fonts)
+* [flag](https://pub.dev/packages/flag) (for getting country flags)
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Repository Structure 🚧
+```
+ * assets/ : contains image files used in the app.
+ * lib/ : all the code which is making the app run goes in this directory.
+ * lib/components : contains code for reusable widgets in the app like searchbox, messagebox, textboxes etc.
+ * lib/constants : contains the configuration for color pallets and text styles.
+ * lib/views : contains code for the frontend screens.
+ ```
